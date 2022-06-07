@@ -2,7 +2,7 @@ package vehicles;
 
 public class Car {
     private final String brand;
-    private  String model;
+    private String model;
 
     public Car(String brand, String model) {
         this.brand = brand;
