@@ -2,6 +2,7 @@ package company;
 
 public class Manager extends Employee {
     private int bonus;
+    private Secretary secretary;
 
     public Manager(String name, int salary) {
         super(name, salary);
@@ -16,19 +17,32 @@ public class Manager extends Employee {
                 " %s and his salary %s £ plus bonus %s £ %n", name, salary, bonus);
     }
 
-    public void makeSpeech() {
-        System.out.println("Work, everyone!");
-    }
-
-    //the overloaded method is called, if an additional argument is given
-    public void makeSpeech(String additionalMessage) {
-        System.out.println(additionalMessage);
-    }
-
     @Override
     public void show() {                     // przesłonięta metoda podmienia zachowanie metody z klasy bazowej Manager
         super.show();                      // super.show() powoduje wywołanie metody show() z klasy bazowej
         System.out.println("I am manager.");
+    }
+
+    public Manager(String name, int salary, Secretary secretary) {
+        super(name, salary);
+        this.secretary = secretary;
+    }
+
+    public void makeCall(String phoneNumber) {
+        if (secretary == null) {
+            System.out.println("I can't call");
+        } else {
+            secretary.makeCall(phoneNumber);
+        }
+    }
+
+    public void makeSpeech() {
+        System.out.println("Work, everyone!");
+    }
+    //the overloaded method is called, if an additional argument is given
+
+    public void makeSpeech(String additionalMessage) {
+        System.out.println(additionalMessage);
     }
 
     @Override
