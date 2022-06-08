@@ -7,7 +7,8 @@ public class Employee {
     public Employee(String name, int salary) {
         this.name = name;
         this.salary = salary;
-        System.out.printf("Showing all arguments  by Employee constructor: %s and his salary %s £", name, salary);
+        System.out.printf("Showing all arguments  by Employee constructor:" +
+                " %s and his salary %s £", name, salary);
     }
 
     public int getSalary() {
