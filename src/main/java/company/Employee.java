@@ -8,7 +8,7 @@ public class Employee {
         this.name = name;
         this.salary = salary;
         System.out.printf("Showing all arguments  by Employee constructor:" +
-                " %s and his salary %s £", name, salary);
+                " %s and his salary %s £ %n", name, salary);
     }
 
     public int getSalary() {
@@ -18,7 +18,8 @@ public class Employee {
 
 
     public void show() {
-        System.out.printf("This is our new employee %s. He earns %s £ %n", name, salary);
+        System.out.printf("%s. He earns %s £ %n", name, getSalary());
+
     }
     public void setSalary(int salary) {
         this.salary = salary;

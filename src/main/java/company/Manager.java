@@ -19,8 +19,9 @@ public class Manager extends Employee {
 
     @Override
     public void show() {                     // przesłonięta metoda podmienia zachowanie metody z klasy bazowej Manager
-        super.show();                      // super.show() powoduje wywołanie metody show() z klasy bazowej
-        System.out.println("I am manager.");
+        super.show();               // super.show() powoduje wywołanie metody show() z klasy bazowej
+        System.out.println("He is manager.");
+
     }
 
     public Manager(String name, int salary, Secretary secretary) {
@@ -28,9 +29,13 @@ public class Manager extends Employee {
         this.secretary = secretary;
     }
 
+    public void setSecretary(Secretary secretary) {
+        this.secretary = secretary;
+    }
+
     public void makeCall(String phoneNumber) {
         if (secretary == null) {
-            System.out.println("I can't call");
+            System.out.println("I can't call, because I don't have secretary");
         } else {
             secretary.makeCall(phoneNumber);
         }
