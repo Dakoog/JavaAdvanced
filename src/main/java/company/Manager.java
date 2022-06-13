@@ -18,8 +18,8 @@ public class Manager extends Employee {
     }
 
     @Override
-    public void show() {                     // przesłonięta metoda podmienia zachowanie metody z klasy bazowej Manager
-        super.show();               // super.show() powoduje wywołanie metody show() z klasy bazowej
+    public void show() {            // the overridden method overrides the behavior of the method in the Manager base class
+        super.show();               // super.show ()-> causes the show () method to be called from the base class
         System.out.println("He is manager.");
 
     }
@@ -33,10 +33,11 @@ public class Manager extends Employee {
         this.secretary = secretary;
     }
 
+    // this is composition -> relation between two classes (A contains B)
     public void makeCall(String phoneNumber) {
-        if (secretary == null) {
+        if (secretary == null) { // when overclass can't make action,
             System.out.println("I can't call, because I don't have secretary");
-        } else {
+        } else {// instructs the class to be referenced to do this work
             secretary.makeCall(phoneNumber);
         }
     }

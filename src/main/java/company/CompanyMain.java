@@ -17,7 +17,7 @@ public class CompanyMain {
         // manager, who needs a secretary
         System.out.println();
         System.out.println("\n--- manager, who needs a secretary ---");
-        Secretary secretary = (Secretary) alicja; // możemy przypisać ją do referencji typu Secretary
+        Secretary secretary = (Secretary) alicja; // can connect with reference of Secretary
         milosz.makeCall("111-111-111");
         milosz.setSecretary(secretary);
         milosz.makeCall("222-222-222");
@@ -38,6 +38,7 @@ public class CompanyMain {
         displayInformation(milosz);
         displayInformation(secretary);
         displayInformation(bogdan);
+        displayInformation(eve);
     }
 
 
