@@ -5,4 +5,5 @@ public abstract class Bird extends Animal { // bird doesn't need to implement an
     public Bird(String name) {
         super(name);
     }
+    abstract void cantRun();
 }

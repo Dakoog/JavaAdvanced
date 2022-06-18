@@ -2,24 +2,32 @@ package animals;
 
 public class Duck extends Bird {
 
-    public Duckling duckling;
+    private Duckling duckling;
 
-    public Duck(String name, Duckling duckling) {
+    public Duck(String name) {
         super(name);
-        this.duckling = new Duckling();// instate for inner class Duckling
+        this.duckling = new Duckling();
+    }
+
+    @Override
+    void cantRun() {
+        System.out.println("I am duck. My name is "+ name +". I can't run. I am swim on rivers or lakes.");
     }
 
     @Override
     public void saySomething() {
-        System.out.println(name + ": Kwa kwa");
+        System.out.println(name + ": kwa kwa");
+
     }
 
     public class Duckling {
+        private String ducklingName;
+
         public void say() {
-            System.out.println("Duckling: " + name + " this is my uncle");   //the inner class has access of fields and methods class Duck
+            System.out.println("Dewey: " + name + " this is my uncle.");   // inner class can use all methods with Duck class
         }
+
     }
 }
-
 
 

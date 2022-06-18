@@ -14,6 +14,6 @@ public class Cat extends Animal implements Runner {
 
     @Override
     public void run() {
-        System.out.println("I run: cps,cps");
+        System.out.println("I am cat. My name is: "+name+". I run: cps,cps");
     }
 }

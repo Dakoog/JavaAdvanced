@@ -12,7 +12,7 @@ public class Dog extends Animal implements Runner {
 
     @Override
     public void run() {
-        System.out.println("I run fast: taps, taps");
+        System.out.println("I am dog. My name is " + name + ". I run fast: taps, taps");
     }
 
 }
