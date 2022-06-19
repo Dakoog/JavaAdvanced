@@ -9,8 +9,12 @@ public class AnimalsMain {
         Cat cat = new Cat("Cleo");
 // -----------------------------------------------------
         Duck duck = new Duck("Donald");
-        Duck.Duckling chick = duck.new Duckling();     // create  instate Duckling inner class
-        chick.say();
+        Duck.Duckling louie = duck.addNephew("Louie");     // create  instate Duckling inner class
+        Duck.Duckling dewey= duck.addNephew("Dewey");     // create  instate Duckling inner class
+        Duck.Duckling huey = duck.addNephew("Huey");     // create  instate Duckling inner class
+        louie.say();
+        huey.say();
+        dewey.say();
         // Warning! When the inner class is static, to create its instances, just type Duck.Duckling chick = duck.new Duckling ();
 
         // Runners -> polymorphism with base class Animal

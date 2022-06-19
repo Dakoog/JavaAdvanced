@@ -1,13 +1,26 @@
 package animals;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class Duck extends Bird {
 
-    private Duckling duckling;
+    private Map<String,Duckling> ducklings = new HashMap<>();
 
     public Duck(String name) {
         super(name);
-        this.duckling = new Duckling();
+        //this.ducklings = new Duckling("Dewey");
     }
+    public Duckling addNephew(String name){
+       return ducklings.put(name,new Duckling(name));
+    }
+    public Duckling getNephew(String name){
+        return ducklings.get(name);
+    }
+
+
 
     @Override
     void cantRun() {
@@ -20,13 +33,26 @@ public class Duck extends Bird {
 
     }
 
-    public class Duckling {
-        private String ducklingName;
+    public class Duckling extends Bird{
 
-        public void say() {
-            System.out.println("Dewey: " + name + " this is my uncle.");   // inner class can use all methods with Duck class
+
+        public Duckling(String name) {
+            super(name);
         }
 
+        public void say() {
+            System.out.println(name + ": "+ Duck.this.name+  "is my uncle.");   // inner class can use all methods with Duck class
+        }
+
+        @Override
+        public void saySomething() {
+
+        }
+
+        @Override
+        void cantRun() {
+
+        }
     }
 }
 
