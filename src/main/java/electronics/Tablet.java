@@ -1,4 +1,4 @@
-package animals.electronics;
+package electronics;
 
 public class Tablet extends Device implements EmailSender {
 

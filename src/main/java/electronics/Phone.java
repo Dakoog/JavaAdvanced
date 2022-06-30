@@ -1,4 +1,4 @@
-package animals.electronics;
+package electronics;
 
 public class Phone extends Device {
     private String number;

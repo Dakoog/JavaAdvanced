@@ -1,4 +1,4 @@
-package animals.electronics;
+package electronics;
 
 public class Radio extends Device{
     public Radio(String model) {

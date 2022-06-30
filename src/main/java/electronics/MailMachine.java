@@ -1,4 +1,4 @@
-package animals.electronics;
+package electronics;
 
 public class MailMachine implements EmailSender {
     @Override

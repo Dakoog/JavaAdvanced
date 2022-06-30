@@ -1,4 +1,4 @@
-package animals.electronics;
+package electronics;
 
 public abstract class Device {
     public String model;
