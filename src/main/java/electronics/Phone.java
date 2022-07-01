@@ -23,6 +23,6 @@ public class Phone extends Device implements EmailSender {
 
     @Override
     public void sendEmail(String message) {
-        System.out.println("Email sender via "+model+": "+ message);
+        System.out.println("Email sender via " + model + ": " + message);
     }
 }
