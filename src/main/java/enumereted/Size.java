@@ -5,16 +5,16 @@ public enum Size {
     int maxWeight;
 
     Size() {
-        System.out.println("Calling  constructor without args");
+        System.out.println("Calling  constructor without args:  ");
     }
 
     Size(int maxWeight) {
         this.maxWeight = maxWeight;
-        System.out.println("Calling constructor with one args");
+        System.out.printf("Calling constructor with one args: %s %n", maxWeight);
     }
 
-    public int getMaxWeight(int maxWeight) {
-        return maxWeight + 2;
+    public int getMaxWeight() {
+        return (maxWeight + 2);
     }
 
 }
