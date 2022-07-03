@@ -16,7 +16,7 @@ public class ExceptionMain {
         try {
             doSomething(-2);
         } catch (Exception e) {
-            System.out.println("Coś poszło nie tak " + e.getMessage());
+            System.out.println("Something went wrong " + e.getMessage());
         }
     }
 
