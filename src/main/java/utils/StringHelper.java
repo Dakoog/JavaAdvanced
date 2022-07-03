@@ -7,7 +7,7 @@ public class StringHelper {
 
             result = Integer.parseInt(value); //converting primitive types (string to integer)
         } catch (NumberFormatException nme) {
-            System.out.println(value + "can't be changed to number");
+            System.out.println(value + "- can't be changed to number");
             return 0;
         }
         finally {
