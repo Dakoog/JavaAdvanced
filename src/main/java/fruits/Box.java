@@ -13,6 +13,7 @@ public class Box<T extends WeightProvider> implements WeightProvider {
     }
 
     @Override
+    // the weight of the fruit plus the weight of the box
     public int getWeight() {
         return content.getWeight() + 1;
     }
