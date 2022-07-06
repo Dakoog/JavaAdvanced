@@ -1,4 +1,4 @@
-package collections;
+package collections.person;
 
 public class EmptyQueueException extends RuntimeException {
  public EmptyQueueException(){

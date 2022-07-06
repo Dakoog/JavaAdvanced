@@ -1,4 +1,4 @@
-package collections;
+package collections.person;
 
 
 import java.util.Deque;
