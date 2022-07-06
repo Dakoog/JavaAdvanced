@@ -1,6 +1,4 @@
-package collections.person;
-
-import java.nio.file.Watchable;
+package person;
 
 public enum Gender {
     M("MAN"),W("WOMAN");

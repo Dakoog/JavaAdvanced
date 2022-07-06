@@ -1,4 +1,4 @@
-package collections.person;
+package person;
 
 public class PersonNotFoundException extends Exception {
     public PersonNotFoundException(String number) {
