@@ -6,9 +6,14 @@ import java.util.Map;
 public class PhoneBook {
     Map<String, Person> phoneBook = new HashMap<>();
 
-    public void addPerson(Person person, String number) {
+    public void addPerson(String number, Person person) {
         // adding new person with her phone number
-        phoneBook.put(number, person);
+        if (phoneBook.containsKey(number)) {
+            throw new ThisNumberExist(number);
+
+        } else {
+            phoneBook.put(number, person);
+        }
     }
 
     public Person searchPerson(String number) throws PersonNotFoundException {  //the required handling of this exception is transferred to the client of this method
@@ -18,8 +23,11 @@ public class PhoneBook {
         }
         return person;
     }
-       /* public Person searchPerson(PersonString number){
-            return person;*/
+
+    public void removePerson(String number) {
+        phoneBook.remove(number);
+    }
+
 
 }
 
